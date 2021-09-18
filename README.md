@@ -22,7 +22,7 @@ Attached below are the wireframes for mobile and desktop layouts, as well as a c
 
 Airtable is showing the following data for my base:
 
-```JSON
+```JavaScript
 
 {
 "records": [
