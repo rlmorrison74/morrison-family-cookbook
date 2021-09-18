@@ -38,3 +38,31 @@ Airtable is showing the following data for my base:
 "createdTime": "2021-09-17T13:10:51.000Z"
 },
 ```
+
+## MVP/PostMVP
+
+### MVP
+
+- Home page that displays all recipes via get request, clickable to view recipe details
+- Details page that shows all airtable data for each recipe, edit button to update recipes
+- New recipe page for creating new recipes
+- Nav buttons to get back to home and get to the new recipes page
+
+### PostMVP
+
+- Delete recipes from the feed and airtable
+- Tailwind styles. Lots and lots of tailwind styles
+
+## Project Schedule
+
+| Date       | Deliverable                                  | Status     |
+| ---------- | -------------------------------------------- | ---------- |
+| Sept 16-17 | Pitches/Project approval/ Airtable Setup     | Complete   |
+| Sept 18-19 | Setup Readme file/start building routes out  | Complete   |
+| Sept 20-21 | Finish building all components functionality | incomplete |
+| Sept 22-23 | Learn and utilize Tailwind                   | incomplete |
+| Sept 24    | Finishing touches and presentations          | incomplete |
+
+## Time Estimates
+
+| Component | Priority | Estimated Time | Time Invested | Actual Time |
