@@ -82,6 +82,7 @@ Airtable is showing the following data for my base:
 | Style new page                         | H        | 2 hours        |            |
 | Style buttons                          | H        | 2 hours        |            |
 | Go back and refactor/clean up code     | L        | 2 hours        |            |
+| ----------------------                 | --       | 30 hours       |            |
 
 ## SWOT Analysis
 
