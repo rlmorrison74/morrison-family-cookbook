@@ -65,4 +65,38 @@ Airtable is showing the following data for my base:
 
 ## Time Estimates
 
-| Component | Priority | Estimated Time | Time Invested | Actual Time |
+| Component                              | Priority | Estimated Time | Time Taken |
+| -------------------------------------- | -------- | -------------- | ---------- |
+| Wireframes                             | H        | 2 hours        | 2 hours    |
+| Airtable setup                         | H        | 1 hour         | 1 hour     |
+| Set up axios calls                     | H        | 2 hours        | 2 hours    |
+| Home page functionality                | H        | 2 hours        | 2 hours    |
+| Edit page functionality                | H        | 2 hours        | 2 hours    |
+| New page functionality                 | H        | 2 hours        | 2 hours    |
+| Details page functionality             | H        | 2 hours        | 2 hours    |
+| Build form to use on new and edit page | H        | 1 hour         | 1 hour     |
+| Build buttons                          | H        | 2 hours        |            |
+| Style home page                        | H        | 3 hours        |            |
+| Style details page                     | H        | 3 hours        |            |
+| Style edit page                        | H        | 2 hours        |            |
+| Style new page                         | H        | 2 hours        |            |
+| Style buttons                          | H        | 2 hours        |            |
+| Go back and refactor/clean up code     | L        | 2 hours        |            |
+
+## SWOT Analysis
+
+### Strengths:
+
+This project is a really simple concept. A basic full CRUD, which I am confident in implementing, so I have no concerns about its functionality, that will be done rather quickly. My focus is going to be on really making this project look good.
+
+### Weaknesses:
+
+I haven't spent much time working with CSS yet in this course, so I'm not confident in my styling abilities. I'm taking advantage of my progress in learning functionality to knock that component out of the way quickly so I can spend most of my week improving my skills at styling, and learning Tailwind CSS, which I've never used before.
+
+### Opportunities:
+
+I have an opportunity to really sink my teeth into learning to style on this one, where I haven't really had time to look into anything with how busy homework has kept me these past couple weeks. I'm looking forward to developing that skillset.
+
+### Threats:
+
+I have trouble motivating myself to do things when I don't "have" to, i.e. Homework, going to class, showing up for a job, taking care of the kids. Sometimes I could find myself getting distracted with other things during project week because my time is mostly my own. Once I sit down and start grinding away at a problem I never stop, but getting there when I'm not forced to start can be trying.
