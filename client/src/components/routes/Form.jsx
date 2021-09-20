@@ -1,6 +1,6 @@
 import { useParams } from "react-router";
 import CancelButton from "../buttons/CancelButton";
-import NewButton from "../buttons/NewButton";
+import CreateButton from "../buttons/CreateButton";
 import UpdateButton from "../buttons/UpdateButton";
 
 export default function Form(props) {
@@ -61,7 +61,7 @@ export default function Form(props) {
         <br />
         <CancelButton />
         <UpdateButton handleSubmit={handleSubmit} />
-        <NewButton handleSubmit={handleSubmit} />
+        <CreateButton handleSubmit={handleSubmit} />
       </form>
     </div>
   );

@@ -1,5 +1,8 @@
-export default function NewButton(props) {
-  const { handleSubmit } = props;
+import { useHistory } from "react-router";
 
-  return <button onClick={handleSubmit}>Create Recipe</button>;
+export default function NewButton() {
+    const history = useHistory()
+    const makeNew = () => history.push("/newrecipe")
+    
+    return <button onClick={makeNew}>New Recipe</button>
 }
