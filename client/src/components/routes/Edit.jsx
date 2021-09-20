@@ -5,8 +5,7 @@ import { getRecipe, setRecipe } from "../../services";
 import Form from "./Form";
 
 export default function Edit() {
-  // toast("Recipe updated!")
-
+  
   const [name, setName] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
@@ -14,7 +13,7 @@ export default function Edit() {
   const [image, setImage] = useState("");
   const { id } = useParams();
   const history = useHistory();
-
+  
   useEffect(() => {
     const fetchRecipe = async () => {
       const res = await getRecipe(id);
@@ -27,7 +26,7 @@ export default function Edit() {
     fetchRecipe();
     // eslint-disable-next-line
   }, []);
-    
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
@@ -39,6 +38,7 @@ export default function Edit() {
     };
     // eslint-disable-next-line
     const res = await setRecipe(id, fields);
+    toast("Recipe updated!")
     history.push(`/details/${id}`);
   };
 

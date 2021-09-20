@@ -1,3 +1,7 @@
+import HomeButton from "./buttons/HomeButton";
+
 export default function Navbar() {
-  return <div>Navbar</div>;
+  return <div>
+    <HomeButton />
+  </div>;
 }

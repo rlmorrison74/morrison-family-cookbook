@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
 import { getRecipe } from "../../services";
 import DeleteButton from "../buttons/DeleteButton";
+import EditButton from "../buttons/EditButton";
 
 export default function Details() {
   const [recipe, setRecipe] = useState({});
@@ -29,9 +29,7 @@ export default function Details() {
       <h4>Ingredients: {recipe.ingredients}</h4>
       <h4>How to make: {recipe.instructions}</h4>
       <h4>Total time til dinner: {recipe.time}</h4>
-      <Link to={`/details/${id}/edit`}>
-        <button>Edit Recipe</button>
-      </Link>
+      <EditButton id={id} />
       <DeleteButton id={id} />
     </div>
   );

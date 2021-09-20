@@ -1,4 +1,12 @@
+import { useParams } from "react-router";
+import CancelButton from "../buttons/CancelButton";
+import NewButton from "../buttons/NewButton";
+import UpdateButton from "../buttons/UpdateButton";
+
 export default function Form(props) {
+  const { id } = useParams();
+  console.log(id);
+
   const {
     name,
     setName,
@@ -15,14 +23,15 @@ export default function Form(props) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
-      <label>Image</label>
+      <form>
+        <label>Image</label>
         <input
           type="text"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
-        <br /><label>Recipe Name</label>
+        <br />
+        <label>Recipe Name</label>
         <input
           type="text"
           value={name}
@@ -49,7 +58,10 @@ export default function Form(props) {
           value={time}
           onChange={(e) => setTime(e.target.value)}
         />
-        <button>Submit</button>
+        <br />
+        <CancelButton />
+        <UpdateButton handleSubmit={handleSubmit} />
+        <NewButton handleSubmit={handleSubmit} />
       </form>
     </div>
   );

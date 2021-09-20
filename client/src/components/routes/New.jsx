@@ -5,16 +5,15 @@ import { newRecipe } from "../../services";
 import Form from "./Form";
 
 export default function New() {
-  // toast("Recipe added to cookbook!")
-
+  
   const [name, setName] = useState("");
   const [ingredients, setIngredients] = useState("");
   const [instructions, setInstructions] = useState("");
   const [time, setTime] = useState("");
   const [image, setImage] = useState("");
-
+  
   const history = useHistory();
-
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
     const fields = {
@@ -25,6 +24,7 @@ export default function New() {
       time,
     };
     await newRecipe(fields);
+    toast("Recipe added to cookbook!")
     history.push("/");
   };
 

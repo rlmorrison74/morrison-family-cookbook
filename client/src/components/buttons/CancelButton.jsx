@@ -1,3 +1,9 @@
+import { useHistory } from "react-router";
+
 export default function CancelButton() {
-    return <div>Cancel</div>
+  const history = useHistory();
+
+  const handleCancel = () => history.push("/");
+
+  return <button onClick={handleCancel}>Cancel</button>;
 }

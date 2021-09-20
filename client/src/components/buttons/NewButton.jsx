@@ -1,3 +1,5 @@
-export default function NewButton() {
-    return <div>NewButton</div>
+export default function NewButton(props) {
+  const { handleSubmit } = props;
+
+  return <button onClick={handleSubmit}>Create Recipe</button>;
 }

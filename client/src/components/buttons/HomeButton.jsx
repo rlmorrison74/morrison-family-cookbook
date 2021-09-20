@@ -1,3 +1,8 @@
+import { useHistory } from "react-router";
+
 export default function HomeButton() {
-  return <div>HomeButton</div>;
+  const history = useHistory();
+  const goHome = () => history.push("/");
+
+  return <button onClick={goHome}>Home</button>;
 }
