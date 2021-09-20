@@ -27,6 +27,7 @@ export default function Form(props) {
         <label>Image</label>
         <input
           type="text"
+          placeholder="image url"
           value={image}
           onChange={(e) => setImage(e.target.value)}
         />
@@ -34,6 +35,7 @@ export default function Form(props) {
         <label>Recipe Name</label>
         <input
           type="text"
+          placeholder="recipe name"
           value={name}
           onChange={(e) => setName(e.target.value)}
         />
@@ -41,6 +43,7 @@ export default function Form(props) {
         <label>Ingredients</label>
         <input
           type="text"
+          placeholder="ingredients"
           value={ingredients}
           onChange={(e) => setIngredients(e.target.value)}
         />
@@ -48,6 +51,7 @@ export default function Form(props) {
         <label>Instructions</label>
         <input
           type="text"
+          placeholder="instructions"
           value={instructions}
           onChange={(e) => setInstructions(e.target.value)}
         />
@@ -55,13 +59,17 @@ export default function Form(props) {
         <label>Cook time(Including Prep)</label>
         <input
           type="text"
+          placeholder="cook time"
           value={time}
           onChange={(e) => setTime(e.target.value)}
         />
         <br />
         <CancelButton />
-        <UpdateButton handleSubmit={handleSubmit} />
-        <CreateButton handleSubmit={handleSubmit} />
+        {id ? (
+          <UpdateButton handleSubmit={handleSubmit} />
+        ) : (
+          <CreateButton handleSubmit={handleSubmit} />
+        )}
       </form>
     </div>
   );

@@ -11,7 +11,7 @@ import New from "./components/routes/New";
 function App() {
   return (
     <div className="App">
-      <Navbar />
+      <Navbar path="*/:id"/>
       <Route exact path="/">
         <Home />
       </Route>
