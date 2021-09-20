@@ -17,7 +17,7 @@ export const getRecipes = async () => {
   return res.data.records;
 };
 
-//For displaying a single recipe by id 
+//For displaying a single recipe by id
 export const getRecipe = async (id) => {
   const res = await axios.get(`${URL}/${id}`, config);
   return res.data.fields;
@@ -30,9 +30,9 @@ export const setRecipe = async (id, fields) => {
 };
 
 export const newRecipe = async (fields) => {
-    const res = await axios.post(`${URL}`, { fields }, config)
-    console.log("success!", res)
-}
+  // eslint-disable-next-line
+  const res = await axios.post(`${URL}`, { fields }, config);
+};
 
 //For deleting a single recipe by id
 export const deleteRecipe = async (id) => {

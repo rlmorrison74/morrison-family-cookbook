@@ -1,8 +1,9 @@
-import { useHistory } from "react-router";
+import { NavLink } from "react-router-dom";
 
 export default function NewButton() {
-    const history = useHistory()
-    const makeNew = () => history.push("/newrecipe")
-    
-    return <button onClick={makeNew}>New Recipe</button>
+  return (
+    <NavLink to="/newrecipe" activeStyle={{ display: "none" }}>
+      <button>New Recipe</button>
+    </NavLink>
+  );
 }

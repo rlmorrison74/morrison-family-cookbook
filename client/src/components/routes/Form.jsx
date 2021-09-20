@@ -5,7 +5,6 @@ import UpdateButton from "../buttons/UpdateButton";
 
 export default function Form(props) {
   const { id } = useParams();
-  console.log(id);
 
   const {
     name,
