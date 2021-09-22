@@ -20,56 +20,70 @@ export default function Form(props) {
     handleSubmit,
   } = props;
 
+  const inputStyles =
+    "m-2 rounded-lg border border-gray-300 w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
+
   return (
     <div>
-      <form>
-        <label>Image</label>
-        <input
-          type="text"
-          placeholder="image url"
-          value={image}
-          onChange={(e) => setImage(e.target.value)}
-        />
-        <br />
-        <label>Recipe Name</label>
-        <input
-          type="text"
-          placeholder="recipe name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-        />
-        <br />
-        <label>Ingredients</label>
-        <input
-          type="text"
-          placeholder="ingredients"
-          value={ingredients}
-          onChange={(e) => setIngredients(e.target.value)}
-        />
-        <br />
-        <label>Instructions</label>
-        <input
-          type="text"
-          placeholder="instructions"
-          value={instructions}
-          onChange={(e) => setInstructions(e.target.value)}
-        />
-        <br />
-        <label>Cook time(Including Prep)</label>
-        <input
-          type="text"
-          placeholder="cook time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-        />
-        <br />
-        <CancelButton />
-        {id ? (
-          <UpdateButton handleSubmit={handleSubmit} />
-        ) : (
-          <CreateButton handleSubmit={handleSubmit} />
-        )}
-      </form>
+      <div className="flex justify-center">
+        <form className="w-1/3">
+          <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">New Recipe</h2>
+          <div className="border-2 shadow-2xl border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
+            <label className="sr-only">Image</label>
+            <input
+              className={inputStyles}
+              type="text"
+              placeholder="image url"
+              value={image}
+              onChange={(e) => setImage(e.target.value)}
+            />
+            <br />
+            <label className="sr-only">Recipe Name</label>
+            <input
+              className={inputStyles}
+              type="text"
+              placeholder="recipe name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+            <br />
+            <label className="sr-only">Ingredients</label>
+            <input
+              className={inputStyles}
+              type="text"
+              placeholder="ingredients"
+              value={ingredients}
+              onChange={(e) => setIngredients(e.target.value)}
+            />
+            <br />
+            <label className="sr-only">Instructions</label>
+            <input
+              className={inputStyles}
+              type="text"
+              placeholder="instructions"
+              value={instructions}
+              onChange={(e) => setInstructions(e.target.value)}
+            />
+            <br />
+            <label className="sr-only">Cook time(Including Prep)</label>
+            <input
+              className={inputStyles}
+              type="text"
+              placeholder="cook time"
+              value={time}
+              onChange={(e) => setTime(e.target.value)}
+            />
+          </div>
+          <div className="flex">
+            {id ? (
+              <UpdateButton handleSubmit={handleSubmit} />
+            ) : (
+              <CreateButton handleSubmit={handleSubmit} />
+            )}
+            <CancelButton />
+          </div>
+        </form>
+      </div>
     </div>
   );
 }
