@@ -26,8 +26,16 @@ export default function Form(props) {
   return (
     <div>
       <div className="flex justify-center">
-        <form className="w-1/3">
-          <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">New Recipe</h2>
+        <form className="w-full sm:w-2/3 lg:w-2/5 xl:w-1/3">
+          {id ? (
+            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">
+              Edit Recipe
+            </h2>
+          ) : (
+            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">
+              New Recipe
+            </h2>
+          )}
           <div className="border-2 shadow-2xl border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
             <label className="sr-only">Image</label>
             <input
