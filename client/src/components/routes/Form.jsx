@@ -28,11 +28,11 @@ export default function Form(props) {
       <div className="flex justify-center">
         <form className="w-full sm:w-2/3 lg:w-2/5 xl:w-1/3">
           {id ? (
-            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">
+            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-blue-200 select-none">
               Edit Recipe
             </h2>
           ) : (
-            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-indigo-200 select-none">
+            <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-blue-200 select-none">
               New Recipe
             </h2>
           )}
