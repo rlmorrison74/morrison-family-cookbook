@@ -31,6 +31,7 @@ export default function Form(props) {
           <div className="border-2 shadow-2xl border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
             <label className="sr-only">Image</label>
             <input
+              autoFocus
               className={inputStyles}
               type="text"
               placeholder="image url"

@@ -5,4 +5,10 @@
 .carattere{
     font-family: 'Carattere', 'cursive';
 }
+
+.headerBackground{
+    background-image: url('https://cdn.shopify.com/s/files/1/1832/6341/products/CHK_BLUE_c3a744f3-f509-4e0f-9ad3-efe333fb6e3d.jpg?v=1621958115');
+    background-size: cover;
+    background-repeat: no-repeat
+}
 @tailwind utilities;
