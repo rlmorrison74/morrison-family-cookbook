@@ -13,17 +13,17 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="flex justify-around flex-row flex-wrap h-screen w-100 bg-gradient-to-b from-blue-200 to-blue-800 bg-repeat">
-      {recipes.map((recipe) => {
-        return (
-          <Link
-            className="w-1/3 sm:w-1/2 lg:w-1/3 p-2"
-            to={`/details/${recipe.id}`}
-            key={recipe.id}
-          >
-            <div className="h-full m-2">
-              <div className="m-2 h-full w-full justify-center items-center flex flex-col bg-gray-200 rounded-xl">
-                <h2 className="text-2xl font-bold text-gray-700">
+    <div className="min-h-screen flex justify-center bg-cover bg-gradient-to-t from-blue-900 bg-repeat">
+      <div className="flex justify-center flex-row flex-wrap h-full w-screen ">
+        {recipes.map((recipe) => {
+          return (
+            <Link
+              className="w-full sm:w-1/2 lg:w-1/3 p-2 flex justify-center transform hover:scale-105 duration-500 ease-in-out"
+              to={`/details/${recipe.id}`}
+              key={recipe.id}
+            >
+              <div className=" h-full w-3/4 justify-center items-center flex flex-col bg-blue-400 rounded-xl">
+                <h2 className="text-2xl font-bold text-blue-900">
                   {recipe.fields.name}
                 </h2>
                 <div className="my-2 h-40 w-40 overflow-hidden">
@@ -34,10 +34,10 @@ export default function Home() {
                   />
                 </div>
               </div>
-            </div>
-          </Link>
-        );
-      })}
+            </Link>
+          );
+        })}
+      </div>
     </div>
   );
 }
