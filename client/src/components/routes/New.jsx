@@ -29,7 +29,7 @@ export default function New() {
   };
 
   return (
-    <div>
+    <div className="bg-gray-200 h-screen">
       <Form
         name={name}
         setName={setName}

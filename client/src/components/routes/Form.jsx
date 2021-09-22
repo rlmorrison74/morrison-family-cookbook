@@ -21,7 +21,7 @@ export default function Form(props) {
   } = props;
 
   const inputStyles =
-    "m-2 rounded-lg border border-gray-300 w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
+    "w-full my-2 rounded-lg border border-gray-300 sm:w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
 
   return (
     <div>
@@ -36,7 +36,7 @@ export default function Form(props) {
               New Recipe
             </h2>
           )}
-          <div className="border-2 shadow-2xl border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
+          <div className="border-2 shadow-2xl bg-gray-100 border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
             <label className="sr-only">Image</label>
             <input
               autoFocus

@@ -23,7 +23,7 @@ export default function Details() {
   }
 
   return (
-    <div className="flex justify-center flex-col items-center">
+    <div className="flex flex-col items-center bg-gray-200 h-screen">
       <div className="flex justify-center m-4">
         <div className="h-40 w-40 rounded-xl overflow-hidden shadow-xl">
           <img
@@ -33,7 +33,7 @@ export default function Details() {
           />
         </div>
       </div>
-      <div className="w-5/6 md:w-3/5 flex flex-col justify-center px-4 leading-loose border-2 border-gray-400  rounded-2xl shadow-2xl">
+      <div className="w-5/6 md:w-3/5 flex flex-col justify-center px-4 leading-loose border-2 bg-gray-100 border-gray-400  rounded-2xl shadow-2xl">
         <h2 className="text-xl font-semibold">{recipe.name}</h2>
         <h4 className="mt-2">
           <span className="font-semibold">Ingredients: </span>
