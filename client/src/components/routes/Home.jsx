@@ -26,7 +26,7 @@ export default function Home() {
                 <h2 className="text-2xl font-bold text-blue-900">
                   {recipe.fields.name}
                 </h2>
-                <div className="my-2 h-40 w-40 overflow-hidden">
+                <div className="my-2 h-40 w-40 rounded-lg overflow-hidden">
                   <img
                     className="object-cover h-full w-full object-center"
                     src={recipe.fields.image}
