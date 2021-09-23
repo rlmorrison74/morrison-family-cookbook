@@ -8,6 +8,7 @@ import Details from "./components/routes/Details";
 import Edit from "./components/routes/Edit";
 import New from "./components/routes/New";
 
+
 function App() {
   return (
     <div className="App">

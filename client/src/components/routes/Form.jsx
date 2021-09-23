@@ -2,7 +2,7 @@ import { useParams } from "react-router";
 import CancelButton from "../buttons/CancelButton";
 import CreateButton from "../buttons/CreateButton";
 import UpdateButton from "../buttons/UpdateButton";
-
+import { uploadImage } from "../../services";
 export default function Form(props) {
   const { id } = useParams();
 
@@ -16,9 +16,15 @@ export default function Form(props) {
     time,
     setTime,
     image,
-    setImage,
+    setImage, 
     handleSubmit,
   } = props;
+
+  const handleChange = async (e) => {
+    e.preventDefault()
+    setImage(await uploadImage(e))
+  }
+  
 
   const inputStyles =
     "w-full my-2 rounded-lg border border-gray-300 sm:w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
@@ -39,16 +45,23 @@ export default function Form(props) {
           <div className="border-2 shadow-2xl bg-gray-100 border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
             <label className="sr-only">Image</label>
             <input
+              type="file"
+              name="file"
+              placeholder="upload an image"
+              onChange={handleChange}
+            />
+            {/* <input
               autoFocus
               className={inputStyles}
               type="text"
               placeholder="image url"
               value={image}
               onChange={(e) => setImage(e.target.value)}
-            />
+            /> */}
             <br />
             <label className="sr-only">Recipe Name</label>
             <input
+              autoFocus
               className={inputStyles}
               type="text"
               placeholder="recipe name"
@@ -85,9 +98,9 @@ export default function Form(props) {
           </div>
           <div className="flex">
             {id ? (
-              <UpdateButton handleSubmit={handleSubmit} />
+              <UpdateButton image={image} handleSubmit={handleSubmit} />
             ) : (
-              <CreateButton handleSubmit={handleSubmit} />
+                <CreateButton image={image} handleSubmit={handleSubmit} />
             )}
             <CancelButton />
           </div>

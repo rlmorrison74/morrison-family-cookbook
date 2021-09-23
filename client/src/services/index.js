@@ -39,3 +39,17 @@ export const deleteRecipe = async (id) => {
   const res = await axios.delete(`${URL}/${id}`, config);
   return res.data.fields;
 };
+
+export const uploadImage = async (e) => {
+  const files = e.target.files;
+  const data = new FormData();
+  data.append("file", files[0]);
+  data.append("upload_preset", "cookbook");
+
+  const res = await axios.post(
+    "https://api.cloudinary.com/v1_1/weatherman74/image/upload",
+    data
+  );
+  console.log(res.data.url)
+  return res.data.url;
+};
