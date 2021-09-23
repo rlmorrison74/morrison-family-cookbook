@@ -40,6 +40,10 @@ export const deleteRecipe = async (id) => {
   return res.data.fields;
 };
 
+// Most of the logic in this function was learned from watching this video
+// https://www.youtube.com/watch?v=cc0oMYaduuA
+// I had to do some tweaks and didn't follow his exact process, but it helped.
+// Function to send an image file to cloudinary and return the url to display in app
 export const uploadImage = async (e) => {
   const files = e.target.files;
   const data = new FormData();

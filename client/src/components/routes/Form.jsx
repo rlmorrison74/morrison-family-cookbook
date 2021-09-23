@@ -16,18 +16,17 @@ export default function Form(props) {
     time,
     setTime,
     image,
-    setImage, 
+    setImage,
     handleSubmit,
   } = props;
 
   const handleChange = async (e) => {
-    e.preventDefault()
-    setImage(await uploadImage(e))
-  }
-  
+    e.preventDefault();
+    setImage(await uploadImage(e));
+  };
 
   const inputStyles =
-    "w-full my-2 rounded-lg border border-gray-300 sm:w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
+    "w-full rounded-lg border border-gray-300 sm:w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
 
   return (
     <div>
@@ -42,22 +41,21 @@ export default function Form(props) {
               New Recipe
             </h2>
           )}
-          <div className="border-2 shadow-2xl bg-gray-100 border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
-            <label className="sr-only">Image</label>
-            <input
-              type="file"
-              name="file"
-              placeholder="upload an image"
-              onChange={handleChange}
-            />
-            {/* <input
-              autoFocus
-              className={inputStyles}
-              type="text"
-              placeholder="image url"
-              value={image}
-              onChange={(e) => setImage(e.target.value)}
-            /> */}
+          <div className="flex flex-col items-center border-2 shadow-2xl bg-gray-100 border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
+            <h2 className="font-semibold mb-2">Recipe Image</h2>
+            {/* lines 46-57 were a custom file upload button I got from https://codepen.io/shuvroroy/pen/VEJGpX */}
+            <label class="w-64 flex flex-col items-center px-2 py-2 bg-white text-blue rounded-lg shadow-lg tracking-wide uppercase border border-blue cursor-pointer hover:bg-blue-600 hover:text-white">
+              <svg
+                class="w-8 h-8"
+                fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+              >
+                <path d="M16.88 9.1A4 4 0 0 1 16 17H5a5 5 0 0 1-1-9.9V7a3 3 0 0 1 4.52-2.59A4.98 4.98 0 0 1 17 8c0 .38-.04.74-.12 1.1zM11 11h3l-4-4-4 4h3v3h2v-3z" />
+              </svg>
+              <span class="mt-2 text-base leading-normal">Select a file</span>
+              <input type="file" class="hidden" onChange={handleChange} />
+            </label>
             <br />
             <label className="sr-only">Recipe Name</label>
             <input
@@ -100,7 +98,7 @@ export default function Form(props) {
             {id ? (
               <UpdateButton image={image} handleSubmit={handleSubmit} />
             ) : (
-                <CreateButton image={image} handleSubmit={handleSubmit} />
+              <CreateButton image={image} handleSubmit={handleSubmit} />
             )}
             <CancelButton />
           </div>

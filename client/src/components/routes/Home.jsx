@@ -18,11 +18,11 @@ export default function Home() {
         {recipes.map((recipe) => {
           return (
             <Link
-              className="w-full sm:w-1/2 lg:w-1/3 p-2 flex justify-center transform hover:scale-105 duration-500 ease-in-out"
+              className="mt-4 w-full sm:w-1/2 lg:w-1/3 p-2 flex justify-center transform hover:scale-105 duration-500 ease-in-out"
               to={`/details/${recipe.id}`}
               key={recipe.id}
             >
-              <div className=" h-full w-3/4 justify-center items-center flex flex-col bg-blue-400 rounded-xl">
+              <div className=" h-full w-3/4 justify-center items-center flex flex-col bg-pink-600 bg-opacity-20 rounded-xl">
                 <h2 className="text-2xl font-bold text-blue-900">
                   {recipe.fields.name}
                 </h2>
