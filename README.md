@@ -59,30 +59,32 @@ Airtable is showing the following data for my base:
 | ---------- | -------------------------------------------- | ---------- |
 | Sept 16-17 | Pitches/Project approval/ Airtable Setup     | Complete   |
 | Sept 18-19 | Setup Readme file/start building routes out  | Complete   |
-| Sept 20-21 | Finish building all components functionality | incomplete |
-| Sept 22-23 | Learn and utilize Tailwind                   | incomplete |
+| Sept 20-21 | Finish building all components functionality | Complete   |
+| Sept 22-23 | Learn and utilize Tailwind                   | Complete   |
 | Sept 24    | Finishing touches and presentations          | incomplete |
 
 ## Time Estimates
 
-| Component                              | Priority | Estimated Time | Time Taken |
-| -------------------------------------- | -------- | -------------- | ---------- |
-| Wireframes                             | H        | 2 hours        | 2 hours    |
-| Airtable setup                         | H        | 1 hour         | 1 hour     |
-| Set up axios calls                     | H        | 2 hours        | 2 hours    |
-| Home page functionality                | H        | 2 hours        | 2 hours    |
-| Edit page functionality                | H        | 2 hours        | 2 hours    |
-| New page functionality                 | H        | 2 hours        | 2 hours    |
-| Details page functionality             | H        | 2 hours        | 2 hours    |
-| Build form to use on new and edit page | H        | 1 hour         | 1 hour     |
-| Build buttons                          | H        | 2 hours        |            |
-| Style home page                        | H        | 3 hours        |            |
-| Style details page                     | H        | 3 hours        |            |
-| Style edit page                        | H        | 2 hours        |            |
-| Style new page                         | H        | 2 hours        |            |
-| Style buttons                          | H        | 2 hours        |            |
-| Go back and refactor/clean up code     | L        | 2 hours        |            |
-| ----------------------                 | --       | 30 hours       |            |
+| Component                                | Priority | Estimated Time | Time Taken |
+| ---------------------------------------- | -------- | -------------- | ---------- |
+| Wireframes                               | H        | 2 hours        | 2 hours    |
+| Airtable setup                           | H        | 1 hour         | 1 hour     |
+| Set up axios calls                       | H        | 2 hours        | 2 hours    |
+| Home page functionality                  | H        | 2 hours        | 2 hours    |
+| Edit page functionality                  | H        | 2 hours        | 2 hours    |
+| New page functionality                   | H        | 2 hours        | 2 hours    |
+| Details page functionality               | H        | 2 hours        | 2 hours    |
+| Build form to use on new and edit page   | H        | 1 hour         | 1 hour     |
+| Build buttons                            | H        | 2 hours        | 2 hours    |
+| Learn tailwind via videos/scrimba course | H        | 6 hours        | 6 hours    |
+| Style home page                          | H        | 3 hours        | 3 hours    |
+| Style details page                       | H        | 3 hours        | 3 hours    |
+| Style edit page                          | H        | 2 hours        | 2 hours    |
+| Style new page                           | H        | 2 hours        | 2 hours    |
+| Style buttons                            | H        | 2 hours        | 2 hours    |
+| Implement image upload via cloudinary    | M        | 2 hours        | 1 hour     |
+| Go back and refactor/clean up code       | L        | 2 hours        | 4 hours    |
+|                                          |          | 38 hours       | 39 hours   |
 
 ## SWOT Analysis
 
