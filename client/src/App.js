@@ -7,6 +7,7 @@ import Home from "./components/routes/Home";
 import Details from "./components/routes/Details";
 import Edit from "./components/routes/Edit";
 import New from "./components/routes/New";
+import Footer from "./components/Footer"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
       <Route path="/newrecipe">
         <New />
       </Route>
+      <Footer />
       <ToastContainer />
     </div>
   );
