@@ -78,6 +78,9 @@ export default function Form(props) {
               </span>
               <input type="file" className="hidden" onChange={handleChange} />
             </label>
+            <div className="w-64 overflow-hidden">
+              <h1 className="mt-2 text-xs tracking-tighter">Image Selected!</h1>
+            </div>
             <br />
             <label className="sr-only">Recipe Name</label>
             <input

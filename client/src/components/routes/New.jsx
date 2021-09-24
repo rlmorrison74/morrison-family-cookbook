@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { newRecipe } from "../../services";
 import Form from "./Form";
+import Footer from "../Footer";
 
 export default function New() {
   const [name, setName] = useState("");
@@ -44,6 +45,7 @@ export default function New() {
         handleSubmit={handleSubmit}
         // setDisableSubmit={setDisableSubmit}
       />
+      {/* <Footer /> */}
     </div>
   );
 }

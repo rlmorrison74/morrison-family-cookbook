@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getRecipe } from "../../services";
 import DeleteButton from "../buttons/DeleteButton";
 import EditButton from "../buttons/EditButton";
+import Footer from "../Footer";
 
 export default function Details() {
   const [recipe, setRecipe] = useState({});
@@ -23,7 +24,7 @@ export default function Details() {
   }
 
   return (
-    <div className="flex flex-col items-center bg-gray-200 h-screen">
+    <div className="flex flex-col items-center bg-gray-200 min-h-screen">
       <div className="flex justify-center m-4">
         <div className="h-40 w-40 rounded-xl overflow-hidden shadow-xl">
           <img
@@ -56,6 +57,7 @@ export default function Details() {
           <DeleteButton id={id} />
         </div>
       </div>
+      {/* <Footer /> */}
     </div>
   );
 }
