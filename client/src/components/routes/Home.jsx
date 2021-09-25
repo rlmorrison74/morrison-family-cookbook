@@ -14,8 +14,8 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen flex justify-center bg-cover bg-gradient-to-t from-blue-900 bg-repeat">
-      <div className="flex justify-center flex-row flex-wrap h-full w-screen ">
+    <div className="min-h-screen w-full flex justify-center items-center bg-cover headerBackground">
+      <div className="flex justify-center items-center flex-row flex-wrap h-full w-full">
         {recipes.map((recipe) => {
           return (
             <Link
@@ -23,17 +23,17 @@ export default function Home() {
               to={`/details/${recipe.id}`}
               key={recipe.id}
             >
-              <div className=" h-full w-3/4 justify-center items-center flex flex-col bg-pink-600 bg-opacity-20 rounded-xl">
-                <h2 className="text-2xl font-bold text-blue-900">
-                  {recipe.fields.name}
-                </h2>
-                <div className="my-2 h-40 w-40 rounded-lg overflow-hidden">
+              <div className="m-2 h-72 w-full justify-center items-center flex flex-col bg-gray-800 bg-opacity-40 rounded-xl">
+                <div className="mb-2 h-full w-full rounded-lg overflow-hidden">
                   <img
-                    className="object-cover h-full w-full object-center"
+                    className="h-full w-full"
                     src={recipe.fields.image}
                     alt={recipe.fields.name}
                   />
                 </div>
+                <h2 className="text-2xl font-bold text-blue-200 opacity-100">
+                  {recipe.fields.name}
+                </h2>
               </div>
             </Link>
           );

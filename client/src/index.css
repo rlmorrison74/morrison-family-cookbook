@@ -1,6 +1,7 @@
 /* ./src/index.css */
 @tailwind base;
 @tailwind components;
+@tailwind utilities;
 
 .carattere{
     font-family: 'Carattere', 'cursive';
@@ -11,4 +12,3 @@
     background-size: cover;
     background-repeat: no-repeat
 }
-@tailwind utilities;

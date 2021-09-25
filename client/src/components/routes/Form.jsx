@@ -54,11 +54,11 @@ export default function Form(props) {
         >
           {id ? (
             <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-blue-200 select-none">
-              Edit Recipe
+              Edit Your Recipe Below
             </h2>
           ) : (
             <h2 className="text-xl font-bold mt-5 border-b-2 pb-4 border-blue-200 select-none">
-              New Recipe
+              Create a New Recipe Below
             </h2>
           )}
           <div className="flex flex-col items-center border-2 shadow-2xl bg-gray-100 border-gray-300 m-4 mb-8 rounded-3xl px-4 py-10">
@@ -79,7 +79,13 @@ export default function Form(props) {
               <input type="file" className="hidden" onChange={handleChange} />
             </label>
             <div className="w-64 overflow-hidden">
-              <h1 className="mt-2 text-xs tracking-tighter">Image Selected!</h1>
+              {image ? (
+                <h1 className="mt-2 text-xs tracking-tighter">
+                  Image Selected!
+                </h1>
+              ) : (
+                <h1></h1>
+              )}
             </div>
             <br />
             <label className="sr-only">Recipe Name</label>
