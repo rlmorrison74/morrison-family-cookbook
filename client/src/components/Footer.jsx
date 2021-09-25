@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
 
-      <div className="px-2 h-full bg-gray-600 text-2xl text-gray-900 font-semibold leading-loose carattere">
+      <div className="flex justify-center px-2 h-full bg-gray-600 text-2xl text-gray-900 font-semibold leading-loose carattere">
         <h1>
           Morrison Family Cookbook was developed by Ray Morrison. You can find
           him on github{" "}
