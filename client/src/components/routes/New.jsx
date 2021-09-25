@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import { newRecipe } from "../../services";
 import Form from "./Form";
-import Footer from "../Footer";
 
 export default function New() {
   const [name, setName] = useState("");
@@ -11,7 +10,6 @@ export default function New() {
   const [instructions, setInstructions] = useState("");
   const [time, setTime] = useState("");
   const [image, setImage] = useState("");
-  // const [disableSubmit, setDisableSubmit] = useState(true);
 
   const history = useHistory();
 
@@ -43,9 +41,7 @@ export default function New() {
         image={image}
         setImage={setImage}
         handleSubmit={handleSubmit}
-        // setDisableSubmit={setDisableSubmit}
       />
-      {/* <Footer /> */}
     </div>
   );
 }

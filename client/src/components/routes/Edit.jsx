@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useParams, useHistory } from "react-router-dom";
 import { getRecipe, setRecipe } from "../../services";
 import Form from "./Form";
-import Footer from "../Footer";
 
 export default function Edit() {
   const [name, setName] = useState("");
@@ -57,7 +56,6 @@ export default function Edit() {
         setImage={setImage}
         handleSubmit={handleSubmit}
       />
-      <Footer />
     </div>
   );
 }

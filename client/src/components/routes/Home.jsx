@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { getRecipes } from "../../services";
-import Footer from "../Footer";
 
 export default function Home() {
   const [recipes, setRecipes] = useState([]);
@@ -38,7 +37,6 @@ export default function Home() {
             </Link>
           );
         })}
-        {/* <Footer /> */}
       </div>
     </div>
   );

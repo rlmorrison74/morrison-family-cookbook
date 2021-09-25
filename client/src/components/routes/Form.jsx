@@ -1,16 +1,11 @@
 import { useParams } from "react-router";
 import { uploadImage } from "../../services";
-// import { useState } from "react";
 import CancelButton from "../buttons/CancelButton";
 import CreateButton from "../buttons/CreateButton";
 import UpdateButton from "../buttons/UpdateButton";
 
 export default function Form(props) {
   const { id } = useParams();
-  // const [nameWarning, setNameWarning] = useState("");
-  // const [ingredientWarning, setIngredientWarning] = useState("");
-  // const [instructionWarning, setInstructionWarning] = useState("");
-  // const [timeWarning, setTimeWarning] = useState("");
 
   const {
     name,
@@ -24,23 +19,12 @@ export default function Form(props) {
     image,
     setImage,
     handleSubmit,
-    // setDisableSubmit,
   } = props;
 
   const handleChange = async (e) => {
     e.preventDefault();
     setImage(await uploadImage(e));
   };
-
-  // const ingredientChange = (e) => {
-  //   setIngredients(e.target.value);
-  //   if (ingredients === "") {
-  //     setIngredientWarning("no don't do that");
-  //     setDisableSubmit(true);
-  //   } else {
-  //     setIngredientWarning("");
-  //   }
-  // };
 
   const inputStyles =
     "w-full rounded-lg border border-gray-300 sm:w-4/5 py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-sm focus:bg-gray-200 focus:outline-none";
@@ -84,7 +68,7 @@ export default function Form(props) {
                   Image Selected!
                 </h1>
               ) : (
-                <h1></h1>
+                <h1>""</h1>
               )}
             </div>
             <br />
@@ -98,7 +82,6 @@ export default function Form(props) {
               onChange={(e) => setName(e.target.value)}
             />
             <br />
-            {/* <h1>{nameWarning}</h1> */}
             <label className="sr-only">Ingredients</label>
             <input
               className={inputStyles}
@@ -108,7 +91,6 @@ export default function Form(props) {
               onChange={(e) => setIngredients(e.target.value)}
             />
             <br />
-            {/* <h1>{ingredientWarning}</h1> */}
             <label className="sr-only">Instructions</label>
             <input
               className={inputStyles}
@@ -118,7 +100,6 @@ export default function Form(props) {
               onChange={(e) => setInstructions(e.target.value)}
             />
             <br />
-            {/* <h1>{instructionWarning}</h1> */}
             <label className="sr-only">Cook time(Including Prep)</label>
             <input
               className={inputStyles}
@@ -128,7 +109,6 @@ export default function Form(props) {
               onChange={(e) => setTime(e.target.value)}
             />
             <br />
-            {/* <h1>{timeWarning}</h1> */}
           </div>
           <div className="flex">
             {id ? (
