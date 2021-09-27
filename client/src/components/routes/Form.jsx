@@ -68,7 +68,7 @@ export default function Form(props) {
                   Image Selected!
                 </h1>
               ) : (
-                <h1>""</h1>
+                <h1> </h1>
               )}
             </div>
             <br />

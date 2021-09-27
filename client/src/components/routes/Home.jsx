@@ -13,7 +13,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="min-h-screen w-full flex justify-center items-center bg-cover headerBackground">
+    <div className="min-h-screen w-full flex justify-center bg-cover headerBackground">
       <div className="flex justify-center items-center flex-row flex-wrap h-full w-full">
         {recipes.map((recipe) => {
           return (
